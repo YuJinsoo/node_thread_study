@@ -6,6 +6,9 @@ import * as jsonConfig from './env_file.json';
 import { env } from 'process';
 import { doesNotMatch } from 'assert';
 
+/**
+ * https://m.blog.naver.com/remocon33/222040770379
+ */
 type Env = {
     "jobSize": number,
     "numThreads": number,

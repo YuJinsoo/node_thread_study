@@ -36,6 +36,9 @@ console.log('jobSize: ', env_config.numThreads);
 console.log('jobSize: ', env_config.useThread);
 const worker_path = path_1.default.join(__dirname, './worker.js');
 const result_arr = new Array(env_config.numThreads + 1);
+// Array나 Map을 이용해서 thread에서 계산한 데이터를 기록할 수 있음.
+// 그런데 'message' 이벤트 처리 함수 내에서만 사용 가능함.
+// 왜냐하면 모두 처리되었을 때 비로소 모든 값을 갖추기 때문
 const t_resultArr = [];
 const t_result_map = new Map();
 let num_result_received = 0;
